@@ -20,6 +20,8 @@ public class ThreadContador extends Thread{
 			
 			System.out.println("El Thread "+ Thread.currentThread().getName() + "disminuye el contador a " + c.getContador());
 			c.setContador(valor-1);
+			
+			Thread.activeCount();
 		}
 	}
 

@@ -5,6 +5,7 @@ public class ThreadsRunnableCLass implements Runnable{
 	private ThreadsRunnableCLass2 c = new ThreadsRunnableCLass2();
 	private int cuenta;
 	private static String LastName;
+	private static int NUM;
 	
 	public ThreadsRunnableCLass( int cuenta, String nombre)
 	{
@@ -19,12 +20,18 @@ public class ThreadsRunnableCLass implements Runnable{
 		
 		for (int i = 0; i< cuenta; i++)
 		{
-			LastName = c.getName();
+			
 			int valor = c.getContador();
 			
 			System.out.println("El Thread "+ c.getName() + "disminuye el contador a " + c.getContador()+ " Escritura "+ LastName);
 			c.setContador(valor-1);
+			
+			NUM = Thread.activeCount();
+			
+			
+			LastName = c.getName();
 		}
+		System.out.println("Hay "+ NUM + "Threads Activos");
 	}
 
 }

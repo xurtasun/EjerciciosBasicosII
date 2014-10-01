@@ -12,5 +12,7 @@ public class ThreadsRunnable1
     	new Thread(tc1).start();
     	new Thread (tc2).start();
     	new Thread (tc3).start();
+    	
+    	
     }
 }
